@@ -30,7 +30,7 @@
 					async : false,
 					contentType : 'application/json',
 					dataType : 'json',
-					url : "http://localhost:9000/employees",
+					url : location.origin+"/employees",
 					success : function(data) {
 						$('#employeeTBLId')
 								.html(
@@ -158,7 +158,7 @@
 			async : false,
 			contentType : 'application/json',
 			dataType : 'json',
-			url : "http://localhost:9000/employee/" + $("#hiddenId").val(),
+			url : location.origin+"/employee/" + $("#hiddenId").val(),
 			success : function(data) {
 				$("#id01").modal('hide');
 				window.location.assign("http://localhost:9000/")
@@ -179,7 +179,7 @@
 			async : false,
 			contentType : 'application/json',
 			dataType : 'json',
-			url : "http://localhost:9000/employee/" + empId,
+			url : location.origin+"/employee/" + empId,
 			success : function(data) {
 				$("#usr").val(data.firstName);
 				$("#age").val(data.age);
@@ -202,7 +202,7 @@
 			async : false,
 			contentType : 'application/json',
 			dataType : 'json',
-			url : "http://localhost:9000/updateEmployee/"
+			url : location.origin+"/updateEmployee/"
 					+ $("#hiddenId").val(),
 			data : inputPayloadString,
 			success : function(data) {
